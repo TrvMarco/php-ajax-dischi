@@ -1,0 +1,41 @@
+/*-------------
+    HEADER
+-------------*/
+
+header{
+    height: 4.6875rem;
+    background-color: #2e3a46;;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    height: 3.75rem;
+}
+
+/*-------------
+    MAIN
+-------------*/
+main{
+    background-color: #1e2d3b;
+    padding: 50px 0;
+    min-height: calc(100vh - 4.6875rem);
+}
+
+/*-------------
+    ALBUM CARD
+-------------*/
+.album_card{
+    background-color: 4.6875rem;
+    padding: .625rem;
+    padding-bottom: 1.875rem;
+    height: 100%;
+}
+
+.album_card h2{
+    font-size: 1.25rem;
+}
+
+.album_card h5, small{
+    color: #808080;
+}
