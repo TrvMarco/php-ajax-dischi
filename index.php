@@ -8,17 +8,63 @@ include './server/database.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- CCS -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Php dischi</title>
 </head>
 <body>
-    <?php foreach($database as $album){ ?>
-        <div>
-            <img style="width: 150px;" src="<?php echo $album['poster']?>" alt="Poster album">
-            <h2>Titolo: <?php echo $album['title']?></h2>
-            <h4>Autore: <?php echo $album['author']?></h4>
-            <h5>Genere: <?php echo $album['genre']?></h5>
-            <small>Anno: <?php echo $album['year']?></small>
+    <header>
+        <img class="img-fluid" id="logo" src="img/spotify-logo.png" alt="Spotify Logo">
+    </header>
+    <main>
+        <div class="container">
+            <div class="row row-cols-lg-5 g-3">
+                <?php foreach($database as $album){ ?>
+                    <div class="col-12 col-md-4 col-lg" >
+                        <div class="album_card text-center">
+                            <img style="width: 150px;" src="<?php echo $album['poster']?>" alt="Poster album">
+                            <h2 class="text-white text-uppercase"><?php echo $album['title']?></h2>
+                            <h5><?php echo $album['author']?></h5>
+                            <small><?php echo $album['year']?></small>
+                        </div>
+                    </div>
+                <?php } ?>                
+            </div>
         </div>
-    <?php } ?>    
+    </main>
 </body>
 </html>
+
+
+<!-- 
+    <header>
+            <img class="img-fluid" id="logo" src="img/spotify-logo.png" alt="Spotify Logo">
+        </header>
+        <main>
+            <div class="container">
+                <div class="row row-cols-lg-5 g-3">
+                    <div v-for="album in albumArray" class="col-12 col-md-4 col-lg">
+                        <div class="album_card text-center">
+                            <img class="img-fluid" :src="album.poster">
+                            <h2 class="text-white text-uppercase">{{album.title}}</h2>
+                            <h5>{{album.author}}</h5>
+                            <small>{{album.year}}</small>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </main>
+ -->
+
+
+ <!-- <?php foreach($database as $album){ ?>
+            <div>
+                <img style="width: 150px;" src="<?php echo $album['poster']?>" alt="Poster album">
+                <h2>Titolo: <?php echo $album['title']?></h2>
+                <h4>Autore: <?php echo $album['author']?></h4>
+                <h5>Genere: <?php echo $album['genre']?></h5>
+                <small>Anno: <?php echo $album['year']?></small>
+            </div>
+            <?php } ?>     -->
