@@ -36,35 +36,3 @@ include './server/database.php';
     </main>
 </body>
 </html>
-
-
-<!-- 
-    <header>
-            <img class="img-fluid" id="logo" src="img/spotify-logo.png" alt="Spotify Logo">
-        </header>
-        <main>
-            <div class="container">
-                <div class="row row-cols-lg-5 g-3">
-                    <div v-for="album in albumArray" class="col-12 col-md-4 col-lg">
-                        <div class="album_card text-center">
-                            <img class="img-fluid" :src="album.poster">
-                            <h2 class="text-white text-uppercase">{{album.title}}</h2>
-                            <h5>{{album.author}}</h5>
-                            <small>{{album.year}}</small>
-                        </div>
-                    </div>
-                  </div>
-            </div>
-        </main>
- -->
-
-
- <!-- <?php foreach($database as $album){ ?>
-            <div>
-                <img style="width: 150px;" src="<?php echo $album['poster']?>" alt="Poster album">
-                <h2>Titolo: <?php echo $album['title']?></h2>
-                <h4>Autore: <?php echo $album['author']?></h4>
-                <h5>Genere: <?php echo $album['genre']?></h5>
-                <small>Anno: <?php echo $album['year']?></small>
-            </div>
-            <?php } ?>     -->
